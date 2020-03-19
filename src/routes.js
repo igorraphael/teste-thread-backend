@@ -1,9 +1,8 @@
 import { Router } from 'express';
+import ClientController from './app/controllers/ClientController';
 
 const routes = new Router();
 
-routes.get('/', (req, res) => {
-  return res.json('Test THREAD');
-});
+routes.post('/clients', ClientController.create);
 
 export default routes;
