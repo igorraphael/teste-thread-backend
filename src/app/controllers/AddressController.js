@@ -6,7 +6,7 @@ class AddressController {
    * List address by tipo.
    */
   async list(req, res) {
-    const { tipo } = req.body;
+    const { tipo } = req.query;
     if(!tipo){ //basic validation
       return res.status(401).json({error: 'Tipo é obrigatorio.'});
     }
